@@ -1,10 +1,3 @@
-/**
-* Template Name: Valera - v2.2.1
-* Template URL: https://bootstrapmade.com/valera-free-bootstrap-theme/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
@@ -14,7 +7,7 @@ body {
 }
 
 a {
-  color: #ff7f5d;
+  color: #A7C7E7;
 }
 
 a:hover {
@@ -45,7 +38,7 @@ h1, h2, h3, h4, h5, h6 {
   position: fixed;
   top: calc(50% - 30px);
   left: calc(50% - 30px);
-  border: 6px solid #ff7f5d;
+  border: 6px solid #A7C7E7;
   border-top-color: white;
   border-radius: 50%;
   width: 60px;
@@ -91,13 +84,13 @@ h1, h2, h3, h4, h5, h6 {
   width: 40px;
   height: 40px;
   border-radius: 4px;
-  background: #ff7f5d;
+  background: #A7C7E7;
   color: #fff;
   transition: all 0.4s;
 }
 
 .back-to-top i:hover {
-  background: #ff9f86;
+  background: #7393B3;
   color: #fff;
 }
 
@@ -177,7 +170,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 2px;
   bottom: -7px;
   left: 0;
-  background-color: #ff7f5d;
+  background-color: #A7C7E7;
   visibility: hidden;
   width: 0px;
   transition: all 0.3s ease-in-out 0s;
@@ -226,7 +219,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-menu .drop-down ul a:hover, .nav-menu .drop-down ul .active > a, .nav-menu .drop-down ul li:hover > a {
-  color: #ff7f5d;
+  color: #A7C7E7;
 }
 
 .nav-menu .drop-down > a:after {
@@ -285,7 +278,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .header-social-links a:hover {
-  color: #ff7f5d;
+  color: #A7C7E7;
 }
 
 @media (max-width: 768px) {
@@ -346,7 +339,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .mobile-nav a:hover, .mobile-nav .active > a, .mobile-nav li:hover > a {
-  color: #ff7f5d;
+  color: #A7C7E7;
   text-decoration: none;
 }
 
@@ -420,13 +413,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #hero:before {
-  content: "";
-  background: rgba(21, 5, 23, 0.5) linear-gradient(rgba(26, 0, 33, 0.5) 0%, rgba(26, 0, 33, 0.5) 5%, rgba(38, 6, 51, 0.5) 40%, rgba(147, 47, 69, 0.7) 76%, rgba(236, 97, 93, 0.7) 94%, rgba(236, 97, 93, 0.5) 100%) repeat scroll 0% 0%;
-  position: absolute;
-  bottom: 0;
-  top: 0;
-  left: 0;
-  right: 0;
+    content: "";
+    background: rgba(21, 5, 23, 0.5) linear-gradient(rgba(26, 0, 33, 0.5) 0%, rgba(26, 0, 33, 0.5) 5%, rgba(38, 6, 51, 0.5) 40%, rgba(147, 47, 69, 0.7) 76%, rgba(236, 97, 93, 0.7) 94%, rgba(236, 97, 93, 0.5) 100%) repeat scroll 0% 0%;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
 }
 
 #hero .hero-container {
@@ -472,8 +465,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #hero .btn-get-started:hover {
-  background: #ff7f5d;
-  border: 2px solid #ff7f5d;
+  background: #A7C7E7;
+  border: 2px solid #A7C7E7;
 }
 
 @media (min-width: 1024px) {
@@ -523,7 +516,7 @@ section {
   display: block;
   width: 50px;
   height: 3px;
-  background: #ff7f5d;
+  background: #A7C7E7;
   bottom: 0;
   left: calc(50% - 25px);
 }
@@ -561,7 +554,7 @@ section {
   left: 0;
   top: 2px;
   font-size: 20px;
-  color: #ff7f5d;
+  color: #A7C7E7;
   line-height: 1;
 }
 
@@ -579,15 +572,15 @@ section {
   border-radius: 5px;
   transition: 0.3s;
   line-height: 1;
-  color: #ff7f5d;
+  color: #A7C7E7;
   -webkit-animation-delay: 0.8s;
   animation-delay: 0.8s;
   margin-top: 6px;
-  border: 2px solid #ff7f5d;
+  border: 2px solid #A7C7E7;
 }
 
 .about .content .btn-learn-more:hover {
-  background: #ff7f5d;
+  background: #A7C7E7;
   color: #fff;
   text-decoration: none;
 }
@@ -602,7 +595,7 @@ section {
 .counts .counters span {
   font-size: 48px;
   display: block;
-  color: #ff7f5d;
+  color: #A7C7E7;
 }
 
 .counts .counters p {
@@ -662,7 +655,7 @@ section {
 }
 
 .our-values .card:hover .card-body {
-  background: #ff7f5d;
+  background: #A7C7E7;
 }
 
 .our-values .card:hover .read-more a, .our-values .card:hover .card-title, .our-values .card:hover .card-title a, .our-values .card:hover .card-text {
@@ -738,7 +731,7 @@ section {
 }
 
 .services .icon-box:hover .title a {
-  color: #ff7f5d;
+  color: #A7C7E7;
 }
 
 .services .description {
@@ -822,7 +815,7 @@ section {
 }
 
 .testimonials .owl-dot.active {
-  background-color: #ff7f5d !important;
+  background-color: #A7C7E7 !important;
 }
 
 @media (max-width: 767px) {
@@ -865,8 +858,8 @@ section {
 }
 
 .cta .cta-btn:hover {
-  background: #ff7f5d;
-  border: 2px solid #ff7f5d;
+  background: #A7C7E7;
+  border: 2px solid #A7C7E7;
 }
 
 /*--------------------------------------------------------------
@@ -890,11 +883,11 @@ section {
 }
 
 .portfolio .portfolio-flters li:hover, .portfolio .portfolio-flters li.filter-active {
-  color: #ff7f5d;
+  color: #A7C7E7;
 }
 
 .portfolio .portfolio-flters li.filter-active::before, .portfolio .portfolio-flters li.filter-active::after {
-  color: #ff7f5d;
+  color: #A7C7E7;
 }
 
 .portfolio .portfolio-item {
@@ -945,7 +938,7 @@ section {
 }
 
 .portfolio .portfolio-item .portfolio-info .preview-link:hover, .portfolio .portfolio-item .portfolio-info .details-link:hover {
-  color: #ff7f5d;
+  color: #A7C7E7;
 }
 
 .portfolio .portfolio-item .portfolio-info .details-link {
@@ -1001,7 +994,7 @@ section {
 }
 
 .team .member .social a:hover {
-  background: #ff7f5d;
+  background: #A7C7E7;
 }
 
 .team .member .social i {
@@ -1063,7 +1056,7 @@ section {
 
 .pricing h4 {
   font-size: 36px;
-  color: #ff7f5d;
+  color: #A7C7E7;
   font-weight: 600;
   font-family: "Poppins", sans-serif;
   margin-bottom: 20px;
@@ -1095,7 +1088,7 @@ section {
 }
 
 .pricing ul i {
-  color: #ff7f5d;
+  color: #A7C7E7;
   font-size: 18px;
   padding-right: 4px;
 }
@@ -1113,7 +1106,7 @@ section {
 }
 
 .pricing .btn-buy {
-  background: #ff7f5d;
+  background: #A7C7E7;
   display: inline-block;
   padding: 8px 35px 9px 35px;
   border-radius: 4px;
@@ -1132,7 +1125,7 @@ section {
 
 .pricing .featured h3 {
   color: #fff;
-  background: #ff7f5d;
+  background: #A7C7E7;
 }
 
 .pricing .advanced {
@@ -1144,7 +1137,7 @@ section {
   z-index: 1;
   font-size: 14px;
   padding: 1px 0 3px 0;
-  background: #ff7f5d;
+  background: #A7C7E7;
   color: #fff;
 }
 
@@ -1206,12 +1199,12 @@ section {
   display: none;
 }
 
-.faq .faq-list a.collapsed {
-  color: #343a40;
-}
+    .faq .faq-list a.collapsed {
+        color: #7393B3;
+    }
 
 .faq .faq-list a.collapsed:hover {
-  color: #ff7f5d;
+  color: #A7C7E7;
 }
 
 .faq .faq-list a.collapsed .icon-show {
@@ -1238,7 +1231,7 @@ section {
 
 .contact .info i {
   font-size: 20px;
-  color: #ff7f5d;
+  color: #A7C7E7;
   float: left;
   width: 44px;
   height: 44px;
@@ -1270,7 +1263,7 @@ section {
 }
 
 .contact .info .email:hover i, .contact .info .address:hover i, .contact .info .phone:hover i {
-  background: #ff7f5d;
+  background: #A7C7E7;
   color: #fff;
 }
 
@@ -1340,7 +1333,7 @@ section {
 }
 
 .contact .php-email-form input:focus, .contact .php-email-form textarea:focus {
-  border-color: #ff7f5d;
+  border-color: #A7C7E7;
 }
 
 .contact .php-email-form input {
@@ -1352,7 +1345,7 @@ section {
 }
 
 .contact .php-email-form button[type="submit"] {
-  background: #ff7f5d;
+  background: #A7C7E7;
   border: 0;
   padding: 10px 24px;
   color: #fff;
@@ -1360,9 +1353,9 @@ section {
   border-radius: 4px;
 }
 
-.contact .php-email-form button[type="submit"]:hover {
-  background: #ff9377;
-}
+    .contact .php-email-form button[type="submit"]:hover {
+        background: #7393B3;
+    }
 
 @-webkit-keyframes animate-loading {
   0% {
@@ -1447,7 +1440,7 @@ section {
 }
 
 .portfolio-details .portfolio-details-carousel .owl-dot.active {
-  background-color: #ff7f5d !important;
+  background-color: #A7C7E7 !important;
 }
 
 .portfolio-details .portfolio-info {
@@ -1578,16 +1571,16 @@ section {
   background: none;
   font-size: 16px;
   padding: 0 20px;
-  background: #ff7f5d;
+  background: #A7C7E7;
   color: #fff;
   transition: 0.3s;
   border-radius: 0 4px 4px 0;
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
 }
 
-#footer .footer-top .footer-newsletter form input[type="submit"]:hover {
-  background: #ff9377;
-}
+    #footer .footer-top .footer-newsletter form input[type="submit"]:hover {
+        background: #7393B3;
+    }
 
 #footer .footer-top .social-links {
   margin-top: 30px;
@@ -1609,7 +1602,7 @@ section {
 }
 
 #footer .footer-top .social-links a:hover {
-  background: #ff7f5d;
+  background: #A7C7E7;
   color: #fff;
   text-decoration: none;
 }
