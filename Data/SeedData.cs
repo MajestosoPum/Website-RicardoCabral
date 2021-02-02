@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Website___Ricardo.Models;
 
 namespace Website___Ricardo.Data
 {
@@ -15,14 +16,14 @@ namespace Website___Ricardo.Data
         private const string ROLE_CLIENTE = "Cliente";
         private const string ROLE_GESTOR_INFO = "GestorInformação";
 
-        internal static void PreencheDadosCV (ListaCVContext bd)
+        internal static void PreencheDadosCV (ListaCV bd)
         {
             InsereEmpresa(bd);
             InsereCargo(bd);
             InsereCliente(bd);
         }
 
-        private static void InsereCliente (ListaCVContext bd)
+        private static void InsereCliente (ListaCV bd)
         {
             if(!bd.Cliente.Any(char => c.Email == NOME_UTILIZADOR_CLIENTE))
             {
@@ -38,7 +39,7 @@ namespace Website___Ricardo.Data
             }
         }
 
-        private static void GaranteExisteEmpresa(ListaCVContext bd, string nome)
+        private static void GaranteExisteEmpresa(ListaCV bd, string nome)
         {
             Empresa empresa = bd.Empresa.FirstOrDefault(c => c.Nome == nome);
             if (empresa == null)
@@ -48,7 +49,7 @@ namespace Website___Ricardo.Data
                 bd.SaveChanges();
             }
         }
-        private static void InsereCargo (ListaCVContext bd)
+        private static void InsereCargo (ListaCV bd)
         {
             if (bd.Cargo.Any()) return;
 
@@ -60,7 +61,7 @@ namespace Website___Ricardo.Data
                 new Cargo
                 {
                     Nome = "Estudante",
-                    Descricao = "Estudante EXTREMAMENTE aplicado no curso Upskill",
+                    Descricao = "Estudante no curso Upskill",
                     Empresa = empresaUpskill
                 },
                 new Cargo
