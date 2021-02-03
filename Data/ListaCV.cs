@@ -9,13 +9,13 @@ namespace Website___Ricardo.Data
 {
     public class ListaCV : DbContext
     {
-        public ListaCV (DbContextOptions<ListaCV> options)
-            : base(options) {
+        public ListaCV(DbContextOptions<ListaCV> options)
+            : base(options) { }
              protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Cargo>() // Lado N
-                .HasOne(p => p.Empresa) // um produto tem uma categoria
-                .WithMany(c => c.Cargos) // que por sua vez tem vários produtos
+                .HasOne(p => p.Empresa) // uma empresa tem vários cargos
+                .WithMany(c => c.Cargos) // que por sua vez tem vá
                 .HasForeignKey(p => p.EmpresaId) // chave estrangeira
                 .OnDelete(DeleteBehavior.Restrict); // não permitir o cascade delete
                    
@@ -25,6 +25,8 @@ namespace Website___Ricardo.Data
         public DbSet<Website___Ricardo.Models.Cargo> Cargo { get; set; }
 
         public DbSet<Website___Ricardo.Models.Empresa> Empresa { get; set; }
+
+        public DbSet<Website___Ricardo.Models.Cliente> Cliente { get; set; }
     }
 }
-}
+

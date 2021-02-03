@@ -15,10 +15,13 @@ namespace Website___Ricardo.Models
         public string Titulo { get; set; }
         [Display(Name = "Titulo")]
 
+        public string Nome { get; set; }
         [Display(Name = "Empresa")]
         public int EmpresaId { get; set; }
         public virtual Empresa Empresa { get; set; }
 
+        public string Descricao { get; set; }
+        [Display(Name = "Descrição")]
         public byte [] Picture { get; set; }
     }
 }

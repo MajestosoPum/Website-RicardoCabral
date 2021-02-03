@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Microsoft.AspNetCore.Identity;
 using System.Threading.Tasks;
 using Website___Ricardo.Models;
 
@@ -25,7 +26,7 @@ namespace Website___Ricardo.Data
 
         private static void InsereCliente (ListaCV bd)
         {
-            if(!bd.Cliente.Any(char => c.Email == NOME_UTILIZADOR_CLIENTE))
+            if(!bd.Cliente.Any(c => c.Email == NOME_UTILIZADOR_CLIENTE))
             {
                 Cliente c = new Cliente
                 {
@@ -39,6 +40,12 @@ namespace Website___Ricardo.Data
             }
         }
 
+        private static void InsereEmpresa(ListaCV bd)
+        {
+            GaranteExisteEmpresa(bd, "Upskill");
+            GaranteExisteEmpresa(bd, "Camel");
+            GaranteExisteEmpresa(bd, "Quantum CBD");
+        }
         private static void GaranteExisteEmpresa(ListaCV bd, string nome)
         {
             Empresa empresa = bd.Empresa.FirstOrDefault(c => c.Nome == nome);
@@ -49,6 +56,8 @@ namespace Website___Ricardo.Data
                 bd.SaveChanges();
             }
         }
+
+     
         private static void InsereCargo (ListaCV bd)
         {
             if (bd.Cargo.Any()) return;
@@ -60,7 +69,7 @@ namespace Website___Ricardo.Data
             {
                 new Cargo
                 {
-                    Nome = "Estudante",
+                    Titulo = "Estudante",
                     Descricao = "Estudante no curso Upskill",
                     Empresa = empresaUpskill
                 },
@@ -74,15 +83,30 @@ namespace Website___Ricardo.Data
 
             bd.SaveChanges();
         }
+        private static void InsereCargoTESTE(ListaCV bd)
+        {
+            Empresa empresaUpskill = bd.Empresa.FirstOrDefault(c => c.Nome == "UpSkill");
 
-        internal static async Task InsereUtilizadorAsync(UserManager<IdentityUser> gestorUtilizadores)
+            for (int i = 0; i < 1000; i++)
+            {
+                bd.Cargo.Add(new Cargo
+                {
+                    Nome = "Cargo " + i,
+                    Empresa = empresaUpskill,
+                });
+            }
+
+            bd.SaveChanges();
+        }
+
+            internal static async Task InsereUtilizadorAsync(UserManager<IdentityUser> gestorUtilizadores)
         {
             IdentityUser cliente = await CriaUtilizadorSeNaoExiste(gestorUtilizadores, NOME_UTILIZADOR_CLIENTE, "Pass321");
             await AdicionaUtilizadorRoleSeNecessario(gestorUtilizadores, cliente, ROLE_CLIENTE);       
         }
         internal static async Task InsereRolesAsync(RoleManager<IdentityRole> gestorRoles)
         {
-            await CriaRoleSeNecessario(gestorRoles, ROLE_ADIMINISTRADOR);
+            await CriaRoleSeNecessario(gestorRoles, ROLE_ADMINISTRADOR);
             await CriaRoleSeNecessario(gestorRoles, ROLE_CLIENTE);                      
         }
 
@@ -97,7 +121,7 @@ namespace Website___Ricardo.Data
         internal static async Task InsereAdministradorAsync(UserManager<IdentityUser> gestorUtilizadores)
         {
             IdentityUser utilizador = await CriaUtilizadorSeNaoExiste(gestorUtilizadores, NOME_UTILIZADOR_ADMIN, PASSWORD_UTILIZADOR_ADMIN);
-            await AdicionaUtilizadorRoleSeNecessario(gestorUtilizadores, utilizador, ROLE_ADIMINISTRADOR);
+            await AdicionaUtilizadorRoleSeNecessario(gestorUtilizadores, utilizador, ROLE_ADMINISTRADOR);
         }
 
         private static async Task AdicionaUtilizadorRoleSeNecessario(UserManager<IdentityUser> gestorUtilizadores, IdentityUser utilizador, string role)
