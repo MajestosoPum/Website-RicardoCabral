@@ -18,5 +18,7 @@ namespace Website___Ricardo.Data
         public DbSet<Website___Ricardo.Models.Cargo> Cargo { get; set; }
 
         public DbSet<Website___Ricardo.Models.Empresa> Empresa { get; set; }
+
+        public DbSet<Website___Ricardo.Models.Cliente> Cliente { get; set; }
     }
 }
