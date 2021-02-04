@@ -10,7 +10,7 @@ namespace Website___Ricardo.Data
 {
     public class Website___RicardoContext : DbContext
     {
-        public Website___RicardoContext (DbContextOptions<Website___RicardoContext> options)
+        public Website___RicardoContext(DbContextOptions<Website___RicardoContext> options)
             : base(options)
         {
         }

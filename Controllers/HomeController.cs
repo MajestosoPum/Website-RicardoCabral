@@ -23,6 +23,9 @@ namespace Website___Ricardo.Controllers
             return View();
         }
 
+
+        //cria ja os views para fazer login e o resto
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

@@ -17,16 +17,16 @@ namespace Website___Ricardo.Data
         private const string ROLE_CLIENTE = "Cliente";
         private const string ROLE_GESTOR_INFO = "GestorInformação";
 
-        internal static void PreencheDadosCV (ListaCV bd)
+        internal static void PreencheDadosCV(ListaCV bd)
         {
             InsereEmpresa(bd);
             InsereCargo(bd);
             InsereCliente(bd);
         }
 
-        private static void InsereCliente (ListaCV bd)
+        private static void InsereCliente(ListaCV bd)
         {
-            if(!bd.Cliente.Any(c => c.Email == NOME_UTILIZADOR_CLIENTE))
+            if (!bd.Cliente.Any(c => c.Email == NOME_UTILIZADOR_CLIENTE))
             {
                 Cliente c = new Cliente
                 {
@@ -57,8 +57,8 @@ namespace Website___Ricardo.Data
             }
         }
 
-     
-        private static void InsereCargo (ListaCV bd)
+
+        private static void InsereCargo(ListaCV bd)
         {
             if (bd.Cargo.Any()) return;
 
@@ -99,15 +99,15 @@ namespace Website___Ricardo.Data
             bd.SaveChanges();
         }
 
-            internal static async Task InsereUtilizadorAsync(UserManager<IdentityUser> gestorUtilizadores)
+        internal static async Task InsereUtilizadorAsync(UserManager<IdentityUser> gestorUtilizadores)
         {
             IdentityUser cliente = await CriaUtilizadorSeNaoExiste(gestorUtilizadores, NOME_UTILIZADOR_CLIENTE, "Pass321");
-            await AdicionaUtilizadorRoleSeNecessario(gestorUtilizadores, cliente, ROLE_CLIENTE);       
+            await AdicionaUtilizadorRoleSeNecessario(gestorUtilizadores, cliente, ROLE_CLIENTE);
         }
         internal static async Task InsereRolesAsync(RoleManager<IdentityRole> gestorRoles)
         {
             await CriaRoleSeNecessario(gestorRoles, ROLE_ADMINISTRADOR);
-            await CriaRoleSeNecessario(gestorRoles, ROLE_CLIENTE);                      
+            await CriaRoleSeNecessario(gestorRoles, ROLE_CLIENTE);
         }
 
         private static async Task CriaRoleSeNecessario(RoleManager<IdentityRole> gestorRoles, string funcao)

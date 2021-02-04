@@ -11,14 +11,14 @@ namespace Website___Ricardo.Data
     {
         public ListaCV(DbContextOptions<ListaCV> options)
             : base(options) { }
-             protected override void OnModelCreating(ModelBuilder modelBuilder)
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Cargo>() // Lado N
                 .HasOne(p => p.Empresa) // uma empresa tem vários cargos
                 .WithMany(c => c.Cargos) // que por sua vez tem vá
                 .HasForeignKey(p => p.EmpresaId) // chave estrangeira
                 .OnDelete(DeleteBehavior.Restrict); // não permitir o cascade delete
-                   
+
             base.OnModelCreating(modelBuilder);
         }
 
